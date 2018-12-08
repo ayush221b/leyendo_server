@@ -12,7 +12,7 @@ app.use(cors())
 
 //connect to mlab database
 
-mongoose.connect('mongodb://ayush:hellogola123@ds141351.mlab.com:41351/gql-react')
+mongoose.connect(process.env.DB_URI)
 mongoose.connection.once('open', ()=> {
     console.log('connected to database')
 })
